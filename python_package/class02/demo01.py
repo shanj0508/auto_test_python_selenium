@@ -198,4 +198,45 @@ print(str21.capitalize())  # 首字母大写
 
 str22 = 'ASD'
 print(str21.lower())
-# 元组
+
+# 元组tuple
+# 定义：()来表示，数据是可以放任意类型的数据，数据之间用.隔开
+# 创建一个空元组
+tup1 = ()
+print(tup1, type(tup1))  # () <class 'tuple'>
+# 创建一个多个元素的元组
+tup2 = (1, 2, 3, 'hello', True)
+print(tup2)  # (1, 2, 3, 'hello', True)
+# 创建一个仅有一个元素的元组，元素后必须加逗号,否则不是元组类型
+tup3 = (1,)
+print(tup3, type(tup3))  # (1,) <class 'tuple'>
+# 若不加逗号，则不是元组类型，而是元素本来的数据类型
+tup4 = (1)
+print(tup4, type(tup4))  # 1 <class 'int'>
+tup5 = ('hello')
+print(tup5, type(tup5))  # hello <class 'str'>
+
+# 访问元组中的数据,通过索引访问,索引从0开始
+tup6 = (1, 2, 3, 'hello', True)
+print(tup6[2])  # 3
+print(tup6[3])  # hello
+# 元组中使用切片
+print(tup6[0:3])  # (1, 2, 3)
+print(tup6[-1])  # True
+# 元组不可以直接进行增加 删除和修改，因为是不可变数据类型
+# 只能通过拼接的方式进行增加数据
+tup7 = (1, 2, 3, 'hello', True)
+tup8 = ('xiaohong',)
+print(tup7 + tup8)  # (1, 2, 3, 'hello', True, 'xiaohong')
+# 删除用del():注意，元组不支持一个元素的删除，只可以删除整个元组
+# del tup7[1]  # 删除元组的第1个元素
+# print(tup7)  # TypeError: 'tuple' object doesn't support item deletion
+# del tup7  # 删除整个元组
+# print(tup7)  # NameError: name 'tup7' is not defined  表示元组未定义，说明元组已经被删除成功
+
+# 复制元组用*
+tup9 = (1, 2, 3, 'hello', True)
+print(tup9 * 2)  # (1, 2, 3, 'hello', True, 1, 2, 3, 'hello', True)
+
+# 获取元组的长度
+print(len(tup9))  # 5
