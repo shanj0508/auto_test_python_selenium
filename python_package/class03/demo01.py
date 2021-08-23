@@ -135,11 +135,130 @@ print(dic1, type(dic1))  # {} <class 'dict'>
 dic1 = {'name': '小红', 'age': 18}
 print(dic1)  # {'name': '小红', 'age': 18}
 
-# 访问字典中的数据
+# 访问字典中的数据：通过键的方式去访问
 dic2 = {'name': '小红', 'age': 18}
 print(dic2['name'])  # 小红
 print(dic2['age'])  # 18
-'''
-集合set:
+
+# 字典的增删改
+#   增加数据
+dic3 = {'name': '小红', 'age': 18}
+dic3['gender'] = '女'
+print(dic3)  # {'name': '小红', 'age': 18, 'gender': '女'}
+#   修改数据
+dic3['name'] = '小明'
+print(dic3)  # {'name': '小明', 'age': 18, 'gender': '女'}
+#   删除数据
+#   pop()指定键删除；
+dic5 = {'name': '小红', 'age': 18, 'gender': '女'}
+dic5.pop('name')
+print(dic5)  # {'age': 18, 'gender': '女'}
+
+#   popitem()删除最后一个；
+dic6 = {'name': '小红', 'age': 18, 'gender': '女'}
+dic6.popitem()  # {'name': '小红', 'age': 18}
+print(dic6)
+#   del[]指定键删除或者删除全部
+# dic4 = {'name': '小红', 'age': 18, 'gender': '女'}
+# del dic4['gender']
+# print(dic4)  # {'name': '小红', 'age': 18}
+# del dic4
+# print(dic4)  # NameError: name 'dic4' is not defined  dic4未定义表示已经被删除
+
+
+# update更新字典数据:  键不能重复,若键名相同，则更新数据，若键名不同，则增加数据
+dic7 = {'name': '小红', 'age': 18}
+dic8 = {'name': '小明', 'age': 19, 'gender': '男', }
+dic7.update(dic8)
+print(dic7)  # {'name': '小明', 'age': 19, 'gender': '男'}
+
+# 字典转换数据类型
+# 字典转为字符串
+dic9 = {'name': '小红', 'age': 18}
+print(dic9, type(dic9))  # {'name': '小红', 'age': 18} <class 'dict'>
+print(str(dic9), type(str(dic9)))  # {'name': '小红', 'age': 18} <class 'str'>
+# 字符串转为字典 eval()
+str1 = "{'name': '小红', 'age': 18}"
+print(str1, type(str1))  # {'name': '小红', 'age': 18} <class 'str'>
+print(eval(str1), type(eval(str1)))  # {'name': '小红', 'age': 18} <class 'dict'>
+
+# items() 一次性拿到字典中所有的值
+dic10 = {'name': '小红', 'age': 18}
+for i, j in dic10.items():
+    print(i, j)  # name 小红  age 18
+
+# 创建一个新的字典 fromkeys(键列表，值)
+dic11 = {}
+list13 = ['name', 'age', 'gender']
+dic12 = dic11.fromkeys(list13, 1)
+print(dic12)  # {'name': 1, 'age': 1, 'gender': 1}
 
 '''
+集合set:
+    是无序的。
+    通过{}或者set进行标识
+    集合里面的数据可以是任意类型的。
+'''
+# 创建一个集合
+#   1.{}---推荐使用这种方式
+set1 = {1, 2, 3.5, '小红'}
+print(set1, type(set1))  # {1, 2, 3.5, '小红'} <class 'set'>
+#   2.set()
+set2 = set((1, 2, 3.5, '小明'))
+print(set2, type(set2))  # {'小明', 1, 2, 3.5} <class 'set'>
+# 创建空集合必须使用set来创建,因为dict也是通过{}作为标识符，因此通过{}创建空时默认是dict类型
+set3 = {}
+print(set3, type(set3))  # {} <class 'dict'>
+set4 = set()
+print(set4, type(set4))  # set() <class 'set'>
+
+# 访问set中的元素：不能访问set中的元素，因为set中元素是无序的
+
+# set进行增删改
+# 增加 add()
+set5 = set((1, 2, 3.5, '小明'))
+set5.add('hello')
+print(set5)  # {1, 2, 3.5, 'hello', '小明'}
+# 修改 update()
+set6 = set((1, 2, 3.5, '小明'))
+set6.update('小红')
+print(set6)  # {1, 2, 3.5, '小明', '红', '小'}
+# 删除
+# remove():指定元素删除,若没有找到该元素，会报错KeyError:
+set7 = set((1, 2, 3.5, '小明'))
+set7.remove('小明')
+print(set7)  # {1, 2, 3.5}
+set7.remove(3.5)
+print(set7)  # {1, 2}
+# pop()：任意删除一个元素
+set8 = set((1, 2, 3.5, '小明'))
+set8.pop()
+print(set8)  # {2, 3.5, '小明'}  {1, 2, 3.5}
+# discard()：指定元素删除,若没有找到该元素，不会报错
+set9 = set((1, 2, 3.5, '小明'))
+set9.discard('小明')
+print(set9)  # {1, 2, 3.5}
+# clear()：删除所有元素
+set10 = set((1, 2, 3.5, '小明'))
+set10.clear()
+print(set10)  # set()
+
+# set的应用场景:对集合进行操作，对重复数据进行操作
+# 交集&：两个集合中相同的元素
+# 并集|：两个集合中所有的元素，去重
+# 差集-：A-B表示集合A中所有的元素，减去与B重复的元素
+# 补集^：返回两个集合中所有的元素，减去两个集合的重复元素
+set1 = {1, 2, 3, 4, 5}
+set2 = {5, 6, 7, 8}
+print(set1 & set2)  # {5}
+print(set1 | set2)  # {1, 2, 3, 4, 5, 6, 7, 8}
+print(set1 - set2)  # {1, 2, 3, 4}
+print(set1 ^ set2)  # {1, 2, 3, 4, 6, 7, 8}
+
+# set去重复
+a = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+print(a)  # [1, 2, 3, 4, 5, 4, 3, 2, 1]
+print(set(a))  # {1, 2, 3, 4, 5}
+# for循环打印不换行
+for i in set(a):
+    print(i,end='')  # 12345
