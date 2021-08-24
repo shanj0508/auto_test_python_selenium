@@ -134,7 +134,7 @@ print(str7)
 str8 = 'D:\github\auto_test_python_selenium\python_package\class02\demo01.py'
 print(str8)
 
-str9 = 'D:\\github\\auto_test_python_selenium\\python_package\\class02\\demo01.py'
+str9 = 'D:\\github\\auto_test_python_selenium\\python_package\\class02\\demo02.py'
 print(str9)
 
 str10 = r'D:\github\auto_test_python_selenium\python_package\class02\demo01.py'
