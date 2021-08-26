@@ -13,48 +13,48 @@ def 函数名(参数1,参数2,参数3,……):
 
 
 # 定义函数
-def func1():
-    print('这是一个函数')
-
-
-# 调用函数
-func1()  # 这是一个函数
+# def func1():
+#     print('这是一个函数')
+#
+#
+# # 调用函数
+# func1()  # 这是一个函数
 
 
 # 例：两个数字求和
-def sum():
-    num1 = 10
-    num2 = 20
-    sum = num1 + num2
-    print(f'和为：{sum}')
-
-
-sum()  # 和为：30
+# def sum():
+#     num1 = 10
+#     num2 = 20
+#     sum = num1 + num2
+#     print(f'和为：{sum}')
+#
+#
+# sum()  # 和为：30
 
 
 # 带参的函数
-# 形参
-def sum1(num1, num2):
-    sum = num1 + num2
-    print(f'{num1}+{num2}={sum}')
-
-
-# 实参
-sum1(30, 20)  # 30+20=50
+# # 形参
+# def sum1(num1, num2):
+#     sum = num1 + num2
+#     print(f'{num1}+{num2}={sum}')
+#
+#
+# # 实参
+# sum1(30, 20)  # 30+20=50
 
 
 # 参数的作用：针对不同的数据，进行相同的逻辑处理
 
 
 # 函数的返回值 return
-def sum2(num1, num2):
-    return num1 + num2
-
-
-# 调用函数，用变量接收函数执行的返回值
-res = sum2(1, 2)
-# 打印函数的返回值
-print(res)
+# def sum2(num1, num2):
+#     return num1 + num2
+#
+#
+# # 调用函数，用变量接收函数执行的返回值
+# res = sum2(1, 2)
+# # 打印函数的返回值
+# print(res)
 
 
 # 空函数
@@ -162,14 +162,18 @@ def functionname([formal_args,] **var_args_dict ):
 # person(name='小明', age=18,gender='男')  # {'name': '小明', 'age': 18, 'gender': '男'}
 
 # *和**同时存在
-# def person(name, *args, **kwargs):
-#     print(name, end=',')
-#     print(args, end=',')
-#     print(kwargs)
-#
-#
-# # 调用时，不加关键字的参数以为()元组形式传入*args；加关键字的参数以{}字典形式传入 **kwargs
-# person('小明', 1, 2, 3, age=18, gender='男')  # 小明,(1, 2, 3),{'age': 18, 'gender': '男'}
+def person(name, *args, **kwargs):
+    print(name, end=',')
+    print(args, end=',')
+    print(kwargs)
+
+
+# 调用时，不加关键字的参数以为()元组形式传入*args；加关键字的参数以{}字典形式传入 **kwargs
+person('小明', 1, 2, 3, age=18, gender='男')  # 小明,(1, 2, 3),{'age': 18, 'gender': '男'}
+
+tup1 = (1, 2, 3)
+dic1 = {'age': 18, 'gender': '男'}
+person('小明', *tup1, **dic1)  # 小明,(1, 2, 3),{'age': 18, 'gender': '男'}
 
 # 直接传入tuple和dict
 # 例1：
@@ -194,18 +198,18 @@ def functionname([formal_args,] **var_args_dict ):
 # person(tup1, dic1)  # (1, '小明', 3.86) {'name': '小红', 'age': 18, 'gender': '男'},
 
 # 函数的嵌套
-def test1():
-    print('test1')
-    print('+' * 50)
-
-
-def test2():
-    print('test2')
-    print('-' * 50)
-    test1()
-
-
-test2()
+# def test1():
+#     print('test1')
+#     print('+' * 50)
+#
+#
+# def test2():
+#     print('test2')
+#     print('-' * 50)
+#     test1()
+#
+#
+# test2()
 
 # test2
 # --------------------------------------------------
@@ -217,11 +221,11 @@ test2()
 lambda [arg1 [,arg2,.....argn]]:expression
 '''
 # # 匿名函数:通过lambda表达式来创建
-sum = lambda arg1, arg2: arg1 + arg2
-
-# 调用sum函数
-print("相加后的值为 : ", sum(10, 20))
-print("相加后的值为 : ", sum(20, 20))
+# sum = lambda arg1, arg2: arg1 + arg2
+#
+# # 调用sum函数
+# print("相加后的值为 : ", sum(10, 20))
+# print("相加后的值为 : ", sum(20, 20))
 
 
 # 模块：一个py文件就是一个模块
