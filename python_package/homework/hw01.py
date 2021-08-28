@@ -112,3 +112,8 @@ for c in str2:
     if c.isalpha() or c.isspace():
         res = res + c
 print("12题：", '字符串分割：', res.split())
+# 正则
+import re
+
+res = re.findall('\w+', str2)
+print(res)  # ['Hey', 'you', 'what', 'are', 'you', 'doing', 'here']
