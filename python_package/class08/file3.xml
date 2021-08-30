@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--xml里面的标签都是成对的，并且区分大小写-->
+<Class>
+    <student sid="S001">
+        <id>1</id>
+        <name>小明</name>
+        <age>10</age>
+        <gender>男</gender>
+    </student>
+    <student sid="S002">
+        <id>2</id>
+        <name>小红</name>
+        <age>11</age>
+        <gender>女</gender>
+    </student>
+    <login>
+        <input username="student" password="123456"/>
+        <input username="teacher" password="123456"/>
+
+    </login>
+</Class>
