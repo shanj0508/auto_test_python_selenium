@@ -1,4 +1,4 @@
-# 时间日期模块与异常处理函数
+# 异常处理函数
 
 '''
 异常处理函数：
@@ -227,7 +227,7 @@ try:
     u_pwd = input_pwd()
     print(u_pwd)
 except Exception as e:
-    print('捕获未知异常：%s'%e)
+    print('捕获未知异常：%s' % e)
 
 '''捕获未知异常：
 请输入密码：1234567
