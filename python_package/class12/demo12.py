@@ -120,7 +120,6 @@ def comment():
 # a = check(comment)
 # a()
 comment()
-# TODO：comment=inner??
 # 上面代码执行过程：
 # 运行comment()，执行comment函数之前会先找到装饰器@check，然后执行check函数，打印'装饰器函数执行了'
 # check函数执行完成后返回inner，所以此时comment==inner(),执行inner函数，打印'请先登录'
