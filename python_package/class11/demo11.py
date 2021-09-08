@@ -225,7 +225,9 @@ demoC的方法
 
 # 类方法：想访问类里面的属性，调用类方法
 # 语法：
-#   定义：@classmethod cls
+#   定义：
+#       在方法前定义：@classmethod
+#       在方法传参里面传入cls
 #   调用：类.方法()
 # class Tool:
 #     # 对象记录器
@@ -245,16 +247,16 @@ demoC的方法
 # tool1.show_count()
 #
 # tool2 = Tool('剪子')
-# print(tool1.count)
-# tool1.show_count()
-
+# print(tool2.count)
+# tool2.count = 99
+# tool2.show_count()
 '''输出结果:
 1
 工具对象的数量1
 2
-工具对象的数量2
-'''
+工具对象的数量99
 
+'''
 
 # 若我们想知道一共创建了多少个工具类，则不能通过self.count调用，需要通过类方法调用
 # class Tool:
@@ -273,18 +275,20 @@ demoC的方法
 #
 # tool1 = Tool('刀子')
 # tool2 = Tool('剪子')
+# tool2.count = 99
+# tool2.show_count()  # 工具对象的数量2
 # Tool.show_count()  # 工具对象的数量2
 
-
 # 静态方法：staticmethod
-class Person:
-    @staticmethod
-    # 注意：声明staticmethod后，定义的方法中没有self
-    def run():
-        print('静态方法run')
-
-
-Person.run()  # 静态方法run
+# 调用：类名.静态方法()
+# class Person:
+#     @staticmethod
+#     # 注意：声明staticmethod后，定义的方法中没有self
+#     def run():
+#         print('静态方法run')
+#
+#
+# Person.run()  # 静态方法run
 
 '''
 类方法和静态方法都不需要实例化
