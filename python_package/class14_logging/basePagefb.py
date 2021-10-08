@@ -1,17 +1,17 @@
 import time
 
 from selenium import webdriver
-from python_package.class14_logging.baselog import test_log
+# from python_package.class14_logging.baselog import test_log
 # from python_package.class14_logging.demo14 import test_log
 
-# import logging.config
+import logging.config
 
 # 拿到配置文件
-# logging.config.fileConfig('log.ini')
+logging.config.fileConfig('log.ini')
 # 拿到日志器
-# log=logging.getLogger()
+log=logging.getLogger()
 
-log = test_log()
+# log = test_log()
 
 
 class BasePage:

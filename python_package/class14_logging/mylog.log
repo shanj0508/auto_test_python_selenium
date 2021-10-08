@@ -1,0 +1,8 @@
+2021-10-08 16:58:36,322 basePagefb.py INFO  __init__  初始化driver<selenium.webdriver.chrome.webdriver.WebDriver (session="b535f69e0f826c14e5e3c58a9f111d6d")>
+2021-10-08 16:58:36,322 basePagefb.py INFO  open  正在访问网址http://www.baidu.com
+2021-10-08 16:58:36,857 basePagefb.py INFO  on_input  正在定位id元素，元素值为kw,输入的内容为秋水
+2021-10-08 16:58:37,018 basePagefb.py INFO  on_click  正在定位id元素，元素值为su,进行点击
+2021-10-08 16:58:37,115 basePagefb.py INFO  wait  正在等待
+2021-10-08 16:58:40,122 basePagefb.py INFO  on_click  正在定位xpath元素，元素值为//*[@id="1"]/h3/a/em,进行点击
+2021-10-08 16:58:40,220 basePagefb.py INFO  wait  正在等待
+2021-10-08 16:58:43,235 basePagefb.py INFO  close  关闭浏览器
