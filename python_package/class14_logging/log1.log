@@ -34,3 +34,47 @@
 2021-10-08 11:37:36,101 remote_connection.py DEBUG  _request  DELETE http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479 {}
 2021-10-08 11:37:36,262 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "DELETE /session/a9e4c988e483355269ad757ff68cd479 HTTP/1.1" 200 14
 2021-10-08 11:37:36,262 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:57,665 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}
+2021-10-08 16:40:57,678 connectionpool.py DEBUG  _new_conn  Starting new HTTP connection (1): 127.0.0.1:64208
+2021-10-08 16:40:58,412 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session HTTP/1.1" 200 788
+2021-10-08 16:40:58,413 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:58,413 basePagefb.py INFO  __init__  ³õÊ¼»¯driver<selenium.webdriver.chrome.webdriver.WebDriver (session="5916c0b81081bd80d971a4c3169ae91f")>
+2021-10-08 16:40:58,413 basePagefb.py INFO  open  ÕıÔÚ·ÃÎÊÍøÖ·http://www.baidu.com
+2021-10-08 16:40:58,413 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/url {"url": "http://www.baidu.com"}
+2021-10-08 16:40:58,940 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/url HTTP/1.1" 200 14
+2021-10-08 16:40:58,940 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:58,940 basePagefb.py INFO  on_input  ÕıÔÚ¶¨Î»idÔªËØ£¬ÔªËØÖµÎªkw,ÊäÈëµÄÄÚÈİÎªÇïË®
+2021-10-08 16:40:58,940 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/element {"using": "css selector", "value": "[id=\"kw\"]"}
+2021-10-08 16:40:58,952 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/element HTTP/1.1" 200 88
+2021-10-08 16:40:58,953 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:58,953 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/element/55265e71-514d-4def-a7fd-8f4c8e2a5f12/value {"text": "\u79cb\u6c34", "value": ["\u79cb", "\u6c34"], "id": "55265e71-514d-4def-a7fd-8f4c8e2a5f12"}
+2021-10-08 16:40:59,039 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/element/55265e71-514d-4def-a7fd-8f4c8e2a5f12/value HTTP/1.1" 200 14
+2021-10-08 16:40:59,040 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:59,040 basePagefb.py INFO  on_click  ÕıÔÚ¶¨Î»idÔªËØ£¬ÔªËØÖµÎªsu,½øĞĞµã»÷
+2021-10-08 16:40:59,040 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/element {"using": "css selector", "value": "[id=\"su\"]"}
+2021-10-08 16:40:59,109 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/element HTTP/1.1" 200 88
+2021-10-08 16:40:59,109 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:59,110 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/element/b613b7f2-25c2-4c8f-9418-b8312fb27770/click {"id": "b613b7f2-25c2-4c8f-9418-b8312fb27770"}
+2021-10-08 16:40:59,181 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/element/b613b7f2-25c2-4c8f-9418-b8312fb27770/click HTTP/1.1" 200 14
+2021-10-08 16:40:59,181 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:40:59,182 basePagefb.py INFO  wait  ÕıÔÚµÈ´ı
+2021-10-08 16:41:02,184 basePagefb.py INFO  on_click  ÕıÔÚ¶¨Î»xpathÔªËØ£¬ÔªËØÖµÎª//*[@id="1"]/h3/a/em,½øĞĞµã»÷
+2021-10-08 16:41:02,184 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/element {"using": "xpath", "value": "//*[@id=\"1\"]/h3/a/em"}
+2021-10-08 16:41:02,198 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/element HTTP/1.1" 200 88
+2021-10-08 16:41:02,198 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:41:02,198 remote_connection.py DEBUG  _request  POST http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f/element/87116aeb-e55b-4005-a82e-87c8984a7b4f/click {"id": "87116aeb-e55b-4005-a82e-87c8984a7b4f"}
+2021-10-08 16:41:02,272 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "POST /session/5916c0b81081bd80d971a4c3169ae91f/element/87116aeb-e55b-4005-a82e-87c8984a7b4f/click HTTP/1.1" 200 14
+2021-10-08 16:41:02,273 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:41:02,273 basePagefb.py INFO  wait  ÕıÔÚµÈ´ı
+2021-10-08 16:41:05,286 basePagefb.py INFO  close  ¹Ø±Õä¯ÀÀÆ÷
+2021-10-08 16:41:05,286 remote_connection.py DEBUG  _request  DELETE http://127.0.0.1:64208/session/5916c0b81081bd80d971a4c3169ae91f {}
+2021-10-08 16:41:05,466 connectionpool.py DEBUG  _make_request  http://127.0.0.1:64208 "DELETE /session/5916c0b81081bd80d971a4c3169ae91f HTTP/1.1" 200 14
+2021-10-08 16:41:05,467 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 16:41:49,542 basePagefb.py INFO  __init__  åˆå§‹åŒ–driver<selenium.webdriver.chrome.webdriver.WebDriver (session="c7fefa0edb3a6ea3755cbebbb913fdb7")>
+2021-10-08 16:41:49,542 basePagefb.py INFO  open  æ­£åœ¨è®¿é—®ç½‘å€http://www.baidu.com
+2021-10-08 16:41:50,059 basePagefb.py INFO  on_input  æ­£åœ¨å®šä½idå…ƒç´ ï¼Œå…ƒç´ å€¼ä¸ºkw,è¾“å…¥çš„å†…å®¹ä¸ºç§‹æ°´
+2021-10-08 16:41:50,222 basePagefb.py INFO  on_click  æ­£åœ¨å®šä½idå…ƒç´ ï¼Œå…ƒç´ å€¼ä¸ºsu,è¿›è¡Œç‚¹å‡»
+2021-10-08 16:41:50,348 basePagefb.py INFO  wait  æ­£åœ¨ç­‰å¾…
+2021-10-08 16:41:53,358 basePagefb.py INFO  on_click  æ­£åœ¨å®šä½xpathå…ƒç´ ï¼Œå…ƒç´ å€¼ä¸º//*[@id="1"]/h3/a/em,è¿›è¡Œç‚¹å‡»
+2021-10-08 16:41:53,474 basePagefb.py INFO  wait  æ­£åœ¨ç­‰å¾…
+2021-10-08 16:41:56,481 basePagefb.py INFO  close  å…³é—­æµè§ˆå™¨

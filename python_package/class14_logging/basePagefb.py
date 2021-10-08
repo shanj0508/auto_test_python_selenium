@@ -1,7 +1,8 @@
 import time
 
 from selenium import webdriver
-from python_package.class14_logging.demo14 import test_log
+from python_package.class14_logging.baselog import test_log
+# from python_package.class14_logging.demo14 import test_log
 
 # import logging.config
 
