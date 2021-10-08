@@ -1,10 +1,36 @@
-2021-10-08 10:13:53,231 demo14.py DEBUG  <module>  debug模式
-2021-10-08 10:13:53,231 demo14.py INFO  <module>  info模式
-2021-10-08 10:13:53,231 demo14.py WARNING  <module>  warning模式
-2021-10-08 10:13:53,231 demo14.py ERROR  <module>  error模式
-2021-10-08 10:13:53,231 demo14.py CRITICAL  <module>  critical模式
-2021-10-08 10:50:55,712 demo14.py DEBUG  <module>  debug模式
-2021-10-08 10:50:55,713 demo14.py INFO  <module>  info模式
-2021-10-08 10:50:55,713 demo14.py WARNING  <module>  warning模式
-2021-10-08 10:50:55,713 demo14.py ERROR  <module>  error模式
-2021-10-08 10:50:55,713 demo14.py CRITICAL  <module>  critical模式
+2021-10-08 11:37:28,598 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}
+2021-10-08 11:37:28,598 connectionpool.py DEBUG  _new_conn  Starting new HTTP connection (1): 127.0.0.1:56606
+2021-10-08 11:37:29,227 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session HTTP/1.1" 200 787
+2021-10-08 11:37:29,227 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:29,227 basePagefb.py INFO  __init__  初始化driver<selenium.webdriver.chrome.webdriver.WebDriver (session="a9e4c988e483355269ad757ff68cd479")>
+2021-10-08 11:37:29,228 basePagefb.py INFO  open  正在访问网址http://www.baidu.com
+2021-10-08 11:37:29,229 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/url {"url": "http://www.baidu.com"}
+2021-10-08 11:37:29,745 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/url HTTP/1.1" 200 14
+2021-10-08 11:37:29,746 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:29,746 basePagefb.py INFO  on_input  正在定位id元素，元素值为kw,输入的内容为秋水
+2021-10-08 11:37:29,746 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/element {"using": "css selector", "value": "[id=\"kw\"]"}
+2021-10-08 11:37:29,766 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/element HTTP/1.1" 200 88
+2021-10-08 11:37:29,766 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:29,767 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/element/01bbe6be-405a-4246-af26-1a05dd327c27/value {"text": "\u79cb\u6c34", "value": ["\u79cb", "\u6c34"], "id": "01bbe6be-405a-4246-af26-1a05dd327c27"}
+2021-10-08 11:37:29,880 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/element/01bbe6be-405a-4246-af26-1a05dd327c27/value HTTP/1.1" 200 14
+2021-10-08 11:37:29,881 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:29,881 basePagefb.py INFO  on_click  正在定位id元素，元素值为su,进行点击
+2021-10-08 11:37:29,881 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/element {"using": "css selector", "value": "[id=\"su\"]"}
+2021-10-08 11:37:29,894 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/element HTTP/1.1" 200 88
+2021-10-08 11:37:29,895 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:29,895 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/element/77dc8ced-8e53-4d5f-891e-e3df616a0e4b/click {"id": "77dc8ced-8e53-4d5f-891e-e3df616a0e4b"}
+2021-10-08 11:37:30,000 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/element/77dc8ced-8e53-4d5f-891e-e3df616a0e4b/click HTTP/1.1" 200 14
+2021-10-08 11:37:30,000 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:30,000 basePagefb.py INFO  wait  正在等待
+2021-10-08 11:37:33,013 basePagefb.py INFO  on_click  正在定位xpath元素，元素值为//*[@id="1"]/h3/a/em,进行点击
+2021-10-08 11:37:33,013 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/element {"using": "xpath", "value": "//*[@id=\"1\"]/h3/a/em"}
+2021-10-08 11:37:33,024 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/element HTTP/1.1" 200 88
+2021-10-08 11:37:33,024 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:33,024 remote_connection.py DEBUG  _request  POST http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479/element/cfeb05a7-6692-4316-af4d-6976a531b258/click {"id": "cfeb05a7-6692-4316-af4d-6976a531b258"}
+2021-10-08 11:37:33,086 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "POST /session/a9e4c988e483355269ad757ff68cd479/element/cfeb05a7-6692-4316-af4d-6976a531b258/click HTTP/1.1" 200 14
+2021-10-08 11:37:33,087 remote_connection.py DEBUG  _request  Finished Request
+2021-10-08 11:37:33,087 basePagefb.py INFO  wait  正在等待
+2021-10-08 11:37:36,101 basePagefb.py INFO  close  关闭浏览器
+2021-10-08 11:37:36,101 remote_connection.py DEBUG  _request  DELETE http://127.0.0.1:56606/session/a9e4c988e483355269ad757ff68cd479 {}
+2021-10-08 11:37:36,262 connectionpool.py DEBUG  _make_request  http://127.0.0.1:56606 "DELETE /session/a9e4c988e483355269ad757ff68cd479 HTTP/1.1" 200 14
+2021-10-08 11:37:36,262 remote_connection.py DEBUG  _request  Finished Request

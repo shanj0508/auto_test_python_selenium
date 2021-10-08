@@ -21,14 +21,14 @@ import logging
 
 # level设置日志级别,format设置日志格式,filename指定日志信息输出到哪个文件中
 # basicConfig基础配置写法：1.日志信息不能在控制台和文件里面同时出现；2.会乱码
-fmt = '%(asctime)s %(filename)s %(levelname)s  %(funcName)s  %(message)s'
-logging.basicConfig(level=logging.DEBUG, format=fmt, filename='log1.log')
+# fmt = '%(asctime)s %(filename)s %(levelname)s  %(funcName)s  %(message)s'
+# logging.basicConfig(level=logging.DEBUG, format=fmt, filename='log1.log')
 # 应用日志
-logging.debug('debug模式')
-logging.info('info模式')
-logging.warning('warning模式')
-logging.error('error模式')
-logging.critical('critical模式')
+# logging.debug('debug模式')
+# logging.info('info模式')
+# logging.warning('warning模式')
+# logging.error('error模式')
+# logging.critical('critical模式')
 
 '''输出日志结果：
 WARNING:root:warning模式
@@ -54,9 +54,18 @@ CRITICAL:root:critical模式
 
 '''
 
-# 应用别人封装好的日志组件
-import loguru
 
-loguru.logger.info('info')
+# 应用别人封装好的日志组件
+# import loguru
+#
+# loguru.logger.info('info')
 
 # 2021-10-08 10:50:55.897 | INFO     | __main__:<module>:60 - info
+
+
+# 封装日志函数:该函数的内容就是设置日志的格式，以及指定日志保存的文件路径
+
+def test_log():
+    fmt = '%(asctime)s %(filename)s %(levelname)s  %(funcName)s  %(message)s'
+    logging.basicConfig(level=logging.DEBUG, format=fmt, filename='log1.log')
+    return logging
