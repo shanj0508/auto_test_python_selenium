@@ -1,0 +1,10 @@
+2021-10-08 10:13:53,231 demo14.py DEBUG  <module>  debugģʽ
+2021-10-08 10:13:53,231 demo14.py INFO  <module>  infoģʽ
+2021-10-08 10:13:53,231 demo14.py WARNING  <module>  warningģʽ
+2021-10-08 10:13:53,231 demo14.py ERROR  <module>  errorģʽ
+2021-10-08 10:13:53,231 demo14.py CRITICAL  <module>  criticalģʽ
+2021-10-08 10:50:55,712 demo14.py DEBUG  <module>  debugģʽ
+2021-10-08 10:50:55,713 demo14.py INFO  <module>  infoģʽ
+2021-10-08 10:50:55,713 demo14.py WARNING  <module>  warningģʽ
+2021-10-08 10:50:55,713 demo14.py ERROR  <module>  errorģʽ
+2021-10-08 10:50:55,713 demo14.py CRITICAL  <module>  criticalģʽ
