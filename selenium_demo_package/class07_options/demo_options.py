@@ -39,13 +39,13 @@ options.add_experimental_option('excludeSwitches', ['enable-automation'])
 # 老版本去掉警告条方式：现在已经用不了了
 # options.add_argument('disable-infobars')
 # 3.让driver对象加载本地缓存
-options.add_argument(r'--user-data-dir=C:\Users\SN-468\AppData\Local\Google\Chrome\User Data')
+options.add_argument(r'--user-data-dir=C:\Users\Shanj\AppData\Local\Google\Chrome\User Data')
 
 # 配置参数加入driver对象
 # 老版本
-driver = webdriver.Chrome(chrome_options=options)
+# driver = webdriver.Chrome(chrome_options=options)
 # 新版本
-# driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
 sleep(3)
 # driver.maximize_window()
