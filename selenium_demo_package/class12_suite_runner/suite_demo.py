@@ -6,8 +6,8 @@ import os
 import unittest
 # from HTMLTestRunner import HTMLTestRunner
 from HTMLTestReportCN import HTMLTestRunner
-from selenium_demo_package.class12_suite_runner.unit_demo import UnitDemo
 
+from selenium_demo_package.class12_suite_runner.unit_demo import UnitDemo
 
 # 创建套件
 # suite = unittest.TestSuite()
@@ -56,11 +56,15 @@ discover = unittest.defaultTestLoader.discover(start_dir=case_dir, pattern='u*.p
 report_dir = './report/'
 # 报告名称
 report_file = report_dir + 'report.html'
+# title
+title = 'Demo系统的测试报告'
+# description
+description = '本次是V0.1版本的首轮冒烟测试执行结果'
 # 判断报告路径是否存在，若路径不存在，则创建路径
 if not os.path.exists(report_dir):
     os.mkdir(report_dir)
 # 生成HTMLTestRunner测试报告相当于在文件中写入内容
 with open(report_file, 'wb') as file:
-    runner = HTMLTestRunner(stream=file, title='测试报告title',
-                            description='测试报告description', verbosity=2)
+    runner = HTMLTestRunner(stream=file, title=title,
+                            description=description, verbosity=2, tester='张三')
     runner.run(discover)
