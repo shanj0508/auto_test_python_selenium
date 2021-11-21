@@ -4,16 +4,16 @@
 # 导入unittest环境
 import unittest
 from selenium_demo_package.class13_ddt_yaml.my_conf.web_keywordDriven import WebKey
-from ddt import ddt, data, unpack
+from ddt import ddt, data, unpack,file_data
 
 
 # 文件的内容读取
-def read_file():
-    li = []
-    file = open('./data/data.txt', 'r', encoding='utf-8')
-    for line in file.readlines():
-        li.append(line)
-    return li
+# def read_file():
+#     li = []
+#     file = open('./data/data.txt', 'r', encoding='utf-8')
+#     for line in file.readlines():
+#         li.append(line)
+#     return li
 
 
 # 自定义UnitTest类对象
@@ -65,14 +65,25 @@ class UnitDemo(unittest.TestCase):
     #     self.wk.sleep(3)
 
     # 基于文件的内容读取，实现数据驱动
-    @data(*read_file())
-    def test_case01(self, txt):
-        url = txt.split(',')[0]
-        name = txt.split(',')[1]
-        self.wk.visit(url)
-        self.wk.input('id', 'kw', name)
-        self.wk.click('id', 'su')
-        self.wk.wait('xpath', '//*[@id="1"]')
+    # @data(*read_file())
+    # def test_case01(self, txt):
+    #     url = txt.split(',')[0]
+    #     name = txt.split(',')[1]
+    #     self.wk.visit(url)
+    #     self.wk.input('id', 'kw', name)
+    #     self.wk.click('id', 'su')
+    #     self.wk.wait('xpath', '//*[@id="1"]')
+    #     self.wk.sleep(3)
+
+    # 基于yaml文件的内容读取，实现数据驱动
+    '''
+        通过@file_data()读取的所有内容，传入kwargs参数
+    '''
+    @file_data('./data/test_data.yaml')
+    def test_case01(self, **kwargs):
+        self.wk.visit(kwargs['url'])
+        self.wk.input(**kwargs['input'])
+        self.wk.click(**kwargs['click'])
         self.wk.sleep(3)
 
     # def test_case01(self):

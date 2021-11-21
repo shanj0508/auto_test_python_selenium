@@ -1,0 +1,10 @@
+# 同一个用例的参数必须在最外层以key: 或者- 包裹，打包成一个整体
+key:
+  url: http://www.baidu.com
+  input:
+    name: id
+    value: kw
+    text: test1
+  click:
+    name: id
+    value: su
