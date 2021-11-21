@@ -1,6 +1,7 @@
 import os
 import unittest
 from HTMLTestReportCN import HTMLTestRunner
+
 from selenium_demo_package.homework.my_conf.mail_conf import send_report
 
 case_dir = './'
@@ -23,5 +24,5 @@ with open(report_file, 'wb') as file:
                             description=description, verbosity=2, tester='陕璟')
     runner.run(discover)
 
-
+# 发送邮件
 send_report()

@@ -39,3 +39,5 @@ def send_report():
 
     # 发送邮件
     con.sendmail(sender, recevier, message.as_string())
+
+
