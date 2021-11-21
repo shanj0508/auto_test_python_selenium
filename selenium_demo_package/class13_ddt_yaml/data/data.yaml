@@ -1,6 +1,11 @@
-# dict
-key: value
-key1: value1
-key2: value2
-
-# list
+# 复合数据类型的写法:list嵌套dict  注意：中间所有的空格和缩进都不可以删掉
+-
+  - a
+  - b
+  - c
+-
+  key: value
+  key1: value1
+-
+  -
+    key1.1: value1.1

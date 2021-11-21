@@ -1,0 +1,15 @@
+# 复合数据类型的写法:dict嵌套list
+key1:
+  key1.1: value1.1
+key2:
+  key2.1:
+    key2.1.1: value2.1.1
+key3:
+  - a
+  - b
+  - c
+key4:
+  -
+    key4.1.1:
+      -
+        key4.1.1.1: value4.1.1.1

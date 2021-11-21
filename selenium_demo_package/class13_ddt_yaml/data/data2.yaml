@@ -1,0 +1,18 @@
+user: xiaoming
+age: 18
+
+# 锚点：用来提取公共变量 &defaults为该公共变量的别名
+# 相当于生成一个defaults变量，变量名称通过&来定义
+defaults: &defaults
+  user: shanjing
+  age: 18
+
+# <<表示合并到当前数据，*表示引用，引用通过锚点定义的变量
+shopinfo:
+  url: shopxo.com
+  # 引用锚点
+  <<: *defaults
+
+baiduinfo:
+  url: baidu.com
+  <<: *defaults
