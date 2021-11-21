@@ -8,12 +8,12 @@ from ddt import ddt, data, unpack
 
 
 # 文件的内容读取
-# def read_file():
-#     li = []
-#     file = open('./data/data.txt', 'r', encoding='utf-8')
-#     for line in file.readlines():
-#         li.append(line)
-#     return li
+def read_file():
+    li = []
+    file = open('./data/data.txt', 'r', encoding='utf-8')
+    for line in file.readlines():
+        li.append(line)
+    return li
 
 
 # 自定义UnitTest类对象
@@ -49,31 +49,31 @@ class UnitDemo(unittest.TestCase):
 
     # 传入2个参数:可以以元组、list、dict的形式传参
     # 元组
-    @data(('http://www.baidu.com', 'test1'),
-          ('http://www.baidu.com', 'test2'),
-          ('http://www.baidu.com', 'test3'))  # 这里的参数书写顺序与变量顺序一一对应
+    # @data(('http://www.baidu.com', 'test1'),
+    #       ('http://www.baidu.com', 'test2'),
+    #       ('http://www.baidu.com', 'test3'))  # 这里的参数书写顺序与变量顺序一一对应
     # list
     # @data(['http://www.baidu.com', 'test1'])
     # dict
     # @data({'url': 'http://www.baidu.com', 'name': 'test1'})
-    @unpack  # 二次解包   按照参数顺序依次传入，因此只能传递定长参数
-    def test_case01(self, url, name):
-        self.wk.visit(url)
-        self.wk.input('id', 'kw', name)
-        self.wk.click('id', 'su')
-        self.wk.wait('xpath', '//*[@id="1"]')
-        self.wk.sleep(3)
-
-    # 基于文件的内容读取，实现数据驱动
-    # @data(*read_file())
+    # @unpack  # 二次解包   按照参数顺序依次传入，因此只能传递定长参数
     # def test_case01(self, url, name):
-    #     li = read_file()
-    #     print(li)
     #     self.wk.visit(url)
     #     self.wk.input('id', 'kw', name)
     #     self.wk.click('id', 'su')
     #     self.wk.wait('xpath', '//*[@id="1"]')
     #     self.wk.sleep(3)
+
+    # 基于文件的内容读取，实现数据驱动
+    @data(*read_file())
+    def test_case01(self, txt):
+        url = txt.split(',')[0]
+        name = txt.split(',')[1]
+        self.wk.visit(url)
+        self.wk.input('id', 'kw', name)
+        self.wk.click('id', 'su')
+        self.wk.wait('xpath', '//*[@id="1"]')
+        self.wk.sleep(3)
 
     # def test_case01(self):
     #     self.wk.visit('http://www.baidu.com')
