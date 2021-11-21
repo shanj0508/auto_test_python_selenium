@@ -39,13 +39,13 @@ class UnitDemo(unittest.TestCase):
     '''
 
     # 传入1个参数
-    # @data('test1', 'test2', 'test3')
-    # def test_case01(self, name):
-    #     self.wk.visit('http://www.baidu.com')
-    #     self.wk.input('id', 'kw', name)
-    #     self.wk.click('id', 'su')
-    #     self.wk.wait('xpath', '//*[@id="1"]')
-    #     self.wk.sleep(3)
+    @data('test1', 'test2', 'test3')
+    def test_case01(self, name):
+        self.wk.visit('http://www.baidu.com')
+        self.wk.input('id', 'kw', name)
+        self.wk.click('id', 'su')
+        self.wk.wait('xpath', '//*[@id="1"]')
+        self.wk.sleep(3)
 
     # 传入2个参数:可以以元组、list、dict的形式传参
     # 元组
@@ -74,26 +74,26 @@ class UnitDemo(unittest.TestCase):
     #     self.wk.wait('xpath', '//*[@id="1"]')
     #     self.wk.sleep(3)
 
-    def test_case01(self):
-        self.wk.visit('http://www.baidu.com')
-        self.wk.input('id', 'kw', 'test1')
-        self.wk.click('id', 'su')
-        self.wk.wait('xpath', '//*[@id="1"]')
-        self.wk.sleep(3)
-
-    def test_case02(self):
-        self.wk.visit('http://www.baidu.com')
-        self.wk.input('id', 'kw', 'test2')
-        self.wk.click('id', 'su')
-        self.wk.wait('xpath', '//*[@id="1"]')
-        self.wk.sleep(3)
-
-    def test_case03(self):
-        self.wk.visit('http://www.baidu.com')
-        self.wk.input('id', 'kw', 'test3')
-        self.wk.click('id', 'su')
-        self.wk.wait('xpath', '//*[@id="1"]')
-        self.wk.sleep(3)
+    # def test_case01(self):
+    #     self.wk.visit('http://www.baidu.com')
+    #     self.wk.input('id', 'kw', 'test1')
+    #     self.wk.click('id', 'su')
+    #     self.wk.wait('xpath', '//*[@id="1"]')
+    #     self.wk.sleep(3)
+    #
+    # def test_case02(self):
+    #     self.wk.visit('http://www.baidu.com')
+    #     self.wk.input('id', 'kw', 'test2')
+    #     self.wk.click('id', 'su')
+    #     self.wk.wait('xpath', '//*[@id="1"]')
+    #     self.wk.sleep(3)
+    #
+    # def test_case03(self):
+    #     self.wk.visit('http://www.baidu.com')
+    #     self.wk.input('id', 'kw', 'test3')
+    #     self.wk.click('id', 'su')
+    #     self.wk.wait('xpath', '//*[@id="1"]')
+    #     self.wk.sleep(3)
 
 
 # UnitTest运行
