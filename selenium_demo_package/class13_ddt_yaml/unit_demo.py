@@ -39,29 +39,30 @@ class UnitDemo(unittest.TestCase):
     '''
 
     # 传入1个参数
-    @data('test1', 'test2', 'test3')
-    def test_case01(self, name):
-        self.wk.visit('http://www.baidu.com')
-        self.wk.input('id', 'kw', name)
-        self.wk.click('id', 'su')
-        self.wk.wait('xpath', '//*[@id="1"]')
-        self.wk.sleep(3)
-
-    # 传入2个参数:可以以元组、list、dict的形式传参
-    # 元组
-    # @data(('http://www.baidu.com', 'test1'), ('http://www.baidu.com', 'test2'),
-    #       ('http://www.baidu.com', 'test3'))  # 这里的参数书写顺序与变量顺序一一对应
-    # # list
-    # # @data(['http://www.baidu.com', 'test1'])
-    # # dict
-    # # @data({'url': 'http://www.baidu.com', 'name': 'test1'})
-    # @unpack  # 二次解包   按照参数顺序依次传入，因此只能传递定长参数
-    # def test_case01(self, url, name):
-    #     self.wk.visit(url)
+    # @data('test1', 'test2', 'test3')
+    # def test_case01(self, name):
+    #     self.wk.visit('http://www.baidu.com')
     #     self.wk.input('id', 'kw', name)
     #     self.wk.click('id', 'su')
     #     self.wk.wait('xpath', '//*[@id="1"]')
     #     self.wk.sleep(3)
+
+    # 传入2个参数:可以以元组、list、dict的形式传参
+    # 元组
+    @data(('http://www.baidu.com', 'test1'),
+          ('http://www.baidu.com', 'test2'),
+          ('http://www.baidu.com', 'test3'))  # 这里的参数书写顺序与变量顺序一一对应
+    # list
+    # @data(['http://www.baidu.com', 'test1'])
+    # dict
+    # @data({'url': 'http://www.baidu.com', 'name': 'test1'})
+    @unpack  # 二次解包   按照参数顺序依次传入，因此只能传递定长参数
+    def test_case01(self, url, name):
+        self.wk.visit(url)
+        self.wk.input('id', 'kw', name)
+        self.wk.click('id', 'su')
+        self.wk.wait('xpath', '//*[@id="1"]')
+        self.wk.sleep(3)
 
     # 基于文件的内容读取，实现数据驱动
     # @data(*read_file())
