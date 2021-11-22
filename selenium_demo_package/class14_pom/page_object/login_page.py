@@ -4,6 +4,7 @@
 from selenium import webdriver
 
 from selenium_demo_package.class14_pom.base_page.base_page import BasePage
+from ..my_conf.contants import default_url
 
 
 # 登录页
@@ -15,7 +16,7 @@ class LoginPage(BasePage):
             3.行为
     '''
     # url
-    url = 'http://39.98.138.157/shopxo/index.php?s=/index/user/logininfo.html'
+    url = default_url + '?s=/index/user/logininfo.html'
 
     # 关键元素
     username = ('name', 'accounts')

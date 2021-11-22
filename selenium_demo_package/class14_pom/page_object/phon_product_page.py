@@ -4,6 +4,7 @@
 from selenium import webdriver
 
 from selenium_demo_package.class14_pom.base_page.base_page import BasePage
+from ..my_conf.contants import default_url
 
 
 # 手机商品详情页
@@ -15,7 +16,7 @@ class PhonePage(BasePage):
             3.行为
     '''
     # url
-    url = 'http://39.98.138.157/shopxo/index.php?s=/index/goods/index/id/2.html'
+    url = default_url + '?s=/index/goods/index/id/2.html'
 
     # 关键元素
     suite = ('xpath', '//li[@data-value="套餐一"]')
