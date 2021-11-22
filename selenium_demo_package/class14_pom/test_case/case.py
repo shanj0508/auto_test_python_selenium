@@ -12,7 +12,7 @@ from selenium_demo_package.class14_pom.page_object.phon_product_page import Phon
 
 
 @ddt
-class Case(unittest.TestCase):
+class AddCartCase(unittest.TestCase):
     # 前置条件
     @classmethod
     def setUpClass(cls) -> None:
