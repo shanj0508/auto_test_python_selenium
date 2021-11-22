@@ -41,7 +41,7 @@ class BasePage:
 
     # 显示等待
     def wait(self, loc):
-        WebDriverWait(self.driver, 10, 0.1).until(lambda el: self.driver.find_element(loc),
+        WebDriverWait(self.driver, 10, 0.1).until(lambda el: self.driver.find_element(*loc),
                                                   message='等待失败')
 
     # 句柄的切换：包含关闭原页面

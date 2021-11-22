@@ -10,8 +10,10 @@ class CartPage(BasePage):
     url = 'http://39.98.138.157/shopxo/index.php?s=/index/cart/index.html'
     # 关键元素
     goods = ('xpath', '//div[@class="goods-base"]')
+    goods_counts_attr = ('value')
 
     # 行为:校验商品是否存在
     def cart_info(self):
         self.visit(self.url)
+        self.sleep(1)
         self.wait(self.goods)
