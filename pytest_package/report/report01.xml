@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="0.109"
+               timestamp="2021-11-25T20:23:52.824813" hostname="LAPTOP-2S6KRTH4">
+        <testcase classname="test_case01" name="test_02" time="0.001"/>
+        <testcase classname="test_case01" name="test_01" time="0.000"/>
+        <testcase classname="test_case01.Demo" name="test_d1" time="0.000"/>
+        <testcase classname="test_case01.Demo" name="test_d2" time="0.001">
+            <failure message="AssertionError: 失败&#10;assert 1 == 2&#10;  +1&#10;  -2">self = &lt;pytest_package.test_case01.Demo
+                object at 0x0000028148755B20&gt;
+
+                def test_d2(self):
+                print('test_d2')
+                &gt; assert 1 == 2, '失败'
+                E AssertionError: 失败
+                E assert 1 == 2
+                E +1
+                E -2
+
+                test_case01.py:68: AssertionError
+            </failure>
+        </testcase>
+    </testsuite>
+</testsuites>

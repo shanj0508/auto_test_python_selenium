@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.243"
+               timestamp="2021-07-15T21:08:36.605397" hostname="DESKTOP-919L3C3">
+        <testcase classname="test_cema_assert" name="test_kkk_01" time="0.002">
+            <failure message="assert 1 == 2">def test_kkk_01():
+                print("kkk")
+                &gt; assert 1==2
+                E assert 1 == 2
+
+                test_cema_assert.py:35: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_cema_assert" name="test_zzz_02" time="0.000"/>
+    </testsuite>
+</testsuites>
