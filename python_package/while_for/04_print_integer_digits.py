@@ -11,7 +11,7 @@ def print_integer_digits1():
     while flag:
         try:
             # 1.用户输入数字
-            input_num = int(raw_input('请输入一个5位的正整数：'))
+            input_num = int(input('请输入一个5位的正整数：'))
             # 2. 获取输入数字的长度
             input_num_str = str(input_num)
             input_num_length = len(input_num_str)
@@ -29,6 +29,7 @@ def print_integer_digits1():
                     # 2. 从低位到高位打印
                     # 字符串反转
                     input_num_str = input_num_str[::-1]
+                    # print(list(reversed(input_num_str)))
                     for i in range(input_num_length):
                         print('{}:{}'.format(digits[i], input_num_str[i]))
 
@@ -49,7 +50,7 @@ def print_integer_digits2():
     while flag:
         try:
             # 1.用户输入数字
-            input_num = int(raw_input('请输入一个5位的正整数：'))
+            input_num = int(input('请输入一个5位的正整数：'))
             # 2. 判断数字是5位以内的正整数
             if input_num <= 0:
                 print('------输入不合法,请输入一个正整数------')
@@ -109,4 +110,5 @@ def print_integer_digits2():
 
 
 if __name__ == '__main__':
+    print_integer_digits1()
     print_integer_digits2()
